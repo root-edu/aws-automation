@@ -12,9 +12,10 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     
 jobs:
-    name: Display running instances
-    runs-on: ubuntu-latest
-    steps:
+    build:
+      name: Display running instances
+      runs-on: ubuntu-latest
+      steps:
       - run: apt-get update
       - run: apt-get install awscli -y
       - run: aws ec2 describe-instances --region us-east-1

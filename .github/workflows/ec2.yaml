@@ -16,7 +16,7 @@ jobs:
       name: Display running instances
       runs-on: ubuntu-latest
       steps:
-      - run: apt-get update
-      - run: apt-get install awscli -y
+      - run: sudo apt-get update
+      - run: sudo apt-get install awscli -y
       - run: aws ec2 describe-instances --region us-east-1
 
